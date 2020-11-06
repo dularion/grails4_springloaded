@@ -35,9 +35,8 @@ class BasexEntityReference extends BasexAssociation {
 class TestController {
 
   def test(){
-    render "OK!!!!!!!?"
-
-    new BasexEntityReference("hello", "open")  //this kills the application
+    def basexEntityReference = new BasexEntityReference("hello", "open")  //this kills the application
+    render basexEntityReference.name
   }
 }
 
