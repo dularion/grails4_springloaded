@@ -1,7 +1,7 @@
 package basex
 
 abstract class BasexAssociation {
-  protected String name
+  public String name
 
   BasexAssociation() {
   }
