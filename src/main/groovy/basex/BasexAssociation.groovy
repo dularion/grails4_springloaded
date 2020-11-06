@@ -5,12 +5,10 @@ package basex
  * @param <T>
  */
 
-abstract class BasexAssociation<T> {
-
-  protected Class<T> enclosedClass
+abstract class BasexAssociation {
+  protected String name
 
   BasexAssociation() {
   }
 
-  abstract List<T> list(Long id, Closure callable = null)
 }

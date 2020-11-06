@@ -10,18 +10,11 @@ package basex
  * @param < T >
  */
 
-class BasexEntityReference<T> extends BasexAssociation<T> {
-  Class referencedClass
+class BasexEntityReference extends BasexAssociation {
+  String status
 
-  BasexEntityReference(Class enclosedClass, Class referencedClass) {
-    this.enclosedClass = enclosedClass
-    this.referencedClass = referencedClass
-  }
-
-  List<T> list(Long id, Closure callable = null) {
-    return enclosedClass.withCriteria {
-      eq('entityClass', referencedClass.canonicalName)
-      eq('entityId', id)
-    }
+  BasexEntityReference(String name, String status) {
+    this.name = name
+    this.status = status
   }
 }
