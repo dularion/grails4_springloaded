@@ -34,7 +34,7 @@ configurations {
 
 dependencies {
 //    developmentOnly("org.springframework.boot:spring-boot-devtools")
-    agent "org.springframework:springloaded:1.2.8.RELEASE"
+//    agent "org.springframework:springloaded:1.2.8.RELEASE"
 
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
@@ -79,6 +79,7 @@ dependencies {
 bootRun {
     ignoreExitValue true
     jvmArgs(
+        "-javaagent:libs/springloaded-1.2.9.BUILD-SNAPSHOT.jar",
         '-Dspring.output.ansi.enabled=always', 
         '-noverify', 
         '-XX:TieredStopAtLevel=1',
