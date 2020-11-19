@@ -1,4 +1,4 @@
-package grails4_springloaded
+package grails4_springloaded2
 
 class UrlMappings {
 
