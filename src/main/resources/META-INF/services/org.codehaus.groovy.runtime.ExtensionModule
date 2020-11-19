@@ -1,0 +1,3 @@
+moduleName = basex-core-extensions
+moduleVersion = 1.0
+extensionClasses = basex.core.extensions.ObjectExtension

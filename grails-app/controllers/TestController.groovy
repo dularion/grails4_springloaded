@@ -1,9 +1,13 @@
 import basex.BasexEntityReference
+import grails4_springloaded2.Foo
 
 class TestController {
 
   def test(){
-    def basexEntityReference = new BasexEntityReference("hello", "open")  //this kills the application
-    render basexEntityReference.name
+    def foo = new Foo(name: "hello")
+    foo.save()
+    foo.deproxy()
+    foo as Foo
+    render foo.name + "!"
   }
 }

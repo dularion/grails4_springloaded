@@ -1,3 +1,4 @@
+<%@ page import="grails4_springloaded2.Foo" %>
 <!doctype html>
 <html>
 <head>
